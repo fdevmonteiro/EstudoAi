@@ -3,26 +3,11 @@ import { Button } from "./ui/button";
 import { Check } from 'lucide-react';
 
 const plans = [
+ 
   {
-    name: "Gratuito",
-    price: "R$0",
-    period: "para sempre",
-    description: "Perfeito para começar",
-    features: [
-      "Rotina básica de estudos",
-      "Método pomodoro padrão",
-      "10 perguntas ao ChatGPT por mês",
-      "Lembretes por email",
-      "Acesso a modelos básicos",
-    ],
-    bgColor: "bg-pastel-blue",
-    buttonColor: "bg-blue-500 hover:bg-blue-600",
-    highlighted: false,
-  },
-  {
-    name: "Premium",
+    name: "Acesso padrão",
     price: "R$29",
-    period: "por mês",
+    period: "Pagamento único",
     description: "Recursos avançados para maximizar seu estudo",
     features: [
       "Rotinas personalizadas ilimitadas",
@@ -30,7 +15,6 @@ const plans = [
       "Perguntas ilimitadas ao ChatGPT",
       "Análise avançada de desempenho",
       "Lembretes inteligentes",
-      "Grupos de estudo",
       "Acesso a todos os modelos",
       "Suporte prioritário",
     ],
@@ -38,24 +22,7 @@ const plans = [
     buttonColor: "bg-purple-500 hover:bg-purple-600",
     highlighted: true,
   },
-  {
-    name: "Equipe",
-    price: "R$99",
-    period: "por mês",
-    description: "Ideal para professores e grupos",
-    features: [
-      "Todas as funcionalidades Premium",
-      "Até 10 membros por equipe",
-      "Painel de administrador",
-      "Estatísticas da equipe",
-      "Acompanhamento de progresso",
-      "API integrada",
-      "Suporte 24/7",
-    ],
-    bgColor: "bg-pastel-green",
-    buttonColor: "bg-green-500 hover:bg-green-600",
-    highlighted: false,
-  },
+  
 ];
 
 const Pricing = () => {
@@ -64,10 +31,10 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Planos para todos os <span className="gradient-text">objetivos</span>
+           Como fazemos a<span className="gradient-text"> mágica</span>?
           </h2>
           <p className="text-lg text-gray-600">
-            Escolha o plano que melhor se adapta às suas necessidades de estudo.
+           Possuímos um plano de acesso único que te da acesso livre a plataforma e criação de plano de estudos
           </p>
         </div>
         
@@ -81,7 +48,7 @@ const Pricing = () => {
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                  Mais Popular
+                 StudyFlow
                 </div>
               )}
               <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
@@ -107,9 +74,7 @@ const Pricing = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12 text-gray-600">
-          <p>Todos os planos incluem 7 dias de garantia de devolução do dinheiro</p>
-        </div>
+        
       </div>
     </section>
   );
