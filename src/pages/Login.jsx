@@ -30,7 +30,7 @@ const Login = () => {
     }
   
    
-    navigate('/dashboard');
+    navigate('/menuprincipal');
     setIsLoading(false);
   };
   return (

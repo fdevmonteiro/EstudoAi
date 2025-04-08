@@ -5,6 +5,8 @@ import LandingPage from "./pages/Landingpage";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard.jsx"
+import MainMenu from "./pages/MainMenu.jsx";
+import Cronogramas from "./pages/Cronogramas.jsx";
 
 const queryClient = new QueryClient();
 
@@ -14,10 +16,14 @@ const App = () => (
       {/* Envolvendo com BrowserRouter */}
      
         <Routes>
+
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/dashboard" element ={<Dashboard/>}/>
+          <Route path="/menuprincipal" element={<MainMenu/>}/>
+          <Route path="/cronogramas" element={<Cronogramas/>}/>
+
         </Routes>
       
     </TooltipProvider>
