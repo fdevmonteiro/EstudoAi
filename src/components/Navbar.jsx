@@ -15,6 +15,7 @@ const Navbar = () => {
           <a href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">Como Funciona</a>
           <a href="#testimonials" className="text-gray-600 hover:text-gray-900 transition-colors">Depoimentos</a>
           <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Preços</a>
+          <Link to="/dashboard" className="text-gray-600 hover:text-gray-900 transition-colors">Dashboard</Link>
         </div>
         <div className="flex space-x-3">
           <Link to="/login">

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/Landingpage";
 import NotFound from "./pages/NotFound";
 import Login from "./Login.jsx";
+import Dashboard from "./Dashboard.jsx"
 
 const queryClient = new QueryClient();
 
@@ -16,7 +17,7 @@ const App = () => (
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/teste" element={<div>TESTE OK</div>} />
+          <Route path="/dashboard" element ={<Dashboard/>}/>
         </Routes>
       
     </TooltipProvider>
