@@ -3,8 +3,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/Landingpage";
 import NotFound from "./pages/NotFound";
-import Login from "./Login.jsx";
-import Dashboard from "./Dashboard.jsx"
+import Login from "./pages/Login.jsx";
+import Dashboard from "./pages/Dashboard.jsx"
 
 const queryClient = new QueryClient();
 

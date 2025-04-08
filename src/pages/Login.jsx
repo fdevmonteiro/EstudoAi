@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, User, Lock, Loader } from 'lucide-react';
-import Navbar from '../src/components/Navbar';
-import Footer from '../src/components/Footer';
-import { supabase } from '../src/lib/supabaseClient';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { supabase } from '../lib/supabaseClient';
 
 const Login = () => {
   const [email, setEmail] = useState('');

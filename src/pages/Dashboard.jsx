@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../src/components/ui/card';
-import { Button } from '../src/components/ui/button';
-import { Input } from '../src/components/ui/input';
-import { Label } from '../src/components/ui/label';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../src/components/ui/accordion';
-import { Checkbox } from '../src/components/ui/checkbox';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+import { Checkbox } from '../components/ui/checkbox';
 import { Check, ChevronRight, Clock, Edit, Plus, Save, TrashIcon } from 'lucide-react';
 //import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../components/ui/collapsible';
 
