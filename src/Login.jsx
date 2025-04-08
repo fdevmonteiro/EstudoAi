@@ -15,38 +15,24 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // Tenta login
-    const { data: loginData, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    if (error) {
-      setIsLoading(false);
-      alert('Erro ao fazer login: ' + error.message);
-      return;
-    }
-
-    // Verifica se o email está autorizado
-    const { data: autorizado, error: authError } = await supabase
+  
+    const { data, error } = await supabase
       .from('usuarios_autorizados')
       .select('*')
       .eq('email', email)
+      .eq('senha', password)
       .single();
-
-    if (!autorizado || authError) {
-      await supabase.auth.signOut();
+  
+    if (error || !data) {
+      alert('Credenciais inválidas ou erro: ');
       setIsLoading(false);
-      alert('Este e-mail não está autorizado. Verifique se você comprou o acesso.');
       return;
     }
-
-    // Se autorizado, redireciona
-    setIsLoading(false);
+  
+   
     navigate('/dashboard');
+    setIsLoading(false);
   };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -124,9 +110,13 @@ const Login = () => {
                   disabled={isLoading}
                 >
                   {isLoading ? (
-                    <Loader className="animate-spin h-5 w-5 mr-2" />
-                  ) : null}
-                  {isLoading ? 'Entrando...' : 'Entrar'}
+                    <>
+                      <Loader className="animate-spin h-5 w-5 mr-2" />
+                      Entrando...
+                    </>
+                  ) : (
+                    'Entrar'
+                  )}
                 </button>
               </form>
             </div>
